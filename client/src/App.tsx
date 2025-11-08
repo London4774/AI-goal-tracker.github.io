@@ -1,27 +1,17 @@
-
+import Header from './components/Header.tsx';
 
 function App() {
 
   return (
     <>
-
-    <h1 className="text-5x1 font-bold underline">
-      Hello, World!
-    </h1>
-
-    <div className="bg-blue-500 text-white">
-      text
-    </div>
-
-    <div className="grid grid-cols-4 gap-3">
-      <div className="p-4 bg-blue-400">Element</div>
-      <div className="p-4 bg-red-400">Element</div>
-      <div className="p-4 bg-yellow-400">Element</div>
-      <div className="p-4 bg-green-400">Element</div>
-      <div className="p-14 bg-red-700 text-white">Element 111</div>
-    </div>
-
-
+      <div className="relative w-full h-screen overflow-hidden">
+        <div className="bg-space"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
+          <Header/>
+          <h1 className="text-5xl font-bold text-white">Hello, World!</h1>
+          <p className="text-gray-300 mt-4">Your Plan-Tracker and AI assistant with you!</p>
+        </div>
+      </div>
     </>
   )
 }
