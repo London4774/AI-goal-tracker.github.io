@@ -1,15 +1,30 @@
-import Header from './components/Header.tsx';
+import Features from './components/Features';
+import Header from './components/Header';
+import Hero from './components/Hero';
 
 function App() {
 
   return (
     <>
-      <div className="relative w-full h-screen overflow-hidden">
-        <div className="bg-space"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-          <Header/>
-          <h1 className="text-5xl font-bold text-white">Hello, World!</h1>
-          <p className="text-gray-300 mt-4">Your Plan-Tracker and AI assistant with you!</p>
+      <div className="relative w-full min-h-screen overflow-hidden">
+        <div className="bg-space absolute inset-0"></div>
+
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Header />
+
+          <main className='flex grow flex-col'>
+
+            <section id='hero'>
+              <Hero />
+            </section>
+
+            <section id='features'>
+              <Features />
+            </section>
+
+          </main>
+
+
         </div>
       </div>
     </>
