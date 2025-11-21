@@ -13,7 +13,7 @@ function Header() {
 
         <div className="flex justify-center items-center gap-10 text-white">
           {["О Проекте", "Особенности", "Контакты"].map((item) => (
-            <span key={item} className="hover:text-white transition-colors duration-200 cursor-pointer">
+            <span key={item} className="hover:text-green-500 transition-colors duration-200 cursor-pointer">
               <a href="#">{item}</a>
             </span>
           ))}

@@ -15,7 +15,7 @@ function Hero() {
 
         <div className='text-white flex justify-center gap-7 my-4'>
 
-            <button className='px-4 py-2 rounded-2xl bg-white text-black font-bold'>
+            <button className='px-4 py-2 rounded-2xl bg-white text-black font-bold hover:bg-green-500 transition'>
               Начать бесплатно
             </button>
 
