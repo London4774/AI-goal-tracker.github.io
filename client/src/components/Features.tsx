@@ -5,7 +5,7 @@ import { ChartBarSquareIcon } from "@heroicons/react/24/solid";
 function Features() {
   return (
     <>
-        <section className="bg-black/50 py-35 px-10 text-center">
+        <div id="features" className="bg-black/50 py-35 px-10 text-center">
             <h1 className="text-white text-4xl font-bold mb-18">Что делает наш ИИ</h1>
 
             <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
@@ -28,7 +28,7 @@ function Features() {
                     <p>Следи за прогрессом, мотивацией и шансами достижения цели.</p>
                 </div>
             </div>
-        </section>
+        </div>
     </>
   )
 }

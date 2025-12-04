@@ -1,8 +1,9 @@
 
 
 export default function Login(){
+
     <>
-        <div>
+        <div className="text-black bg-pink-500">
             <span>UserName or Email:</span>
                 <input type="text" />
                 <span>Password:</span>

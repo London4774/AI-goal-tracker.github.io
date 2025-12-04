@@ -3,7 +3,7 @@
 function About() {
   return (
     <>
-        <section className="relative bg-black/80 text-white py-24 px-6 flex flex-col items-center">
+        <div id="about" className="relative bg-black/80 text-white py-24 px-6 flex flex-col items-center">
           <h2 className="text-4xl font-bold mb-6 text-center">
             Почему именно наш Проект
           </h2>
@@ -35,7 +35,7 @@ function About() {
                 </p>
               </div>
             </div>
-        </section>
+        </div>
     </>
   )
 }
