@@ -21,8 +21,10 @@ export default function Login() {
 
         {/* Header */}
         <div className="text-white text-center font-bold text-3xl py-5">
-          <span className="text-green-500">Goal</span>Tracker with{" "}
-          <span className="text-green-500">AI</span>
+          <span className="text-green-500">Track
+              <span className="text-yellow-500">UR</span>
+              <span className="text-white">Future</span>
+            </span>
         </div>
 
         <h2 className="text-2xl text-center font-semibold text-white py-4">

@@ -21,8 +21,10 @@ export default function Register() {
 
         {/* Header */}
         <div className="text-white text-center font-bold text-3xl py-5">
-          <span className="text-green-500">Goal</span>Tracker with{" "}
-          <span className="text-green-500">AI</span>
+          <span className="text-green-500">Track
+              <span className="text-yellow-500">UR</span>
+              <span className="text-white">Future</span>
+            </span>
 
           <p className="text-2xl font-medium text-center mt-2">
             Создай свой план на будущее с AI
