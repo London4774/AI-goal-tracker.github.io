@@ -2,6 +2,8 @@ import { useState } from "react";
 import MainHeader from "../components/MainHeader";
 import CalendarSection from "../components/CalendarSection";
 import DayModal from "../components/DayModal";
+import Particles from "./../components/Particles";
+import Footer from "./../components/Footer";
 import { FaPlus, FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 
@@ -13,15 +15,26 @@ export default function Home() {
     "Тренировка 30 минут",
     "Учеба 2 часа по React",
   ]);
+
+
   const [showAI, setShowAI] = useState(false);
-
-
-
   const motivation = "Ты становишься сильнее каждый раз, когда не сдаешься.";
 
   return (
-    <div className="relative w-full min-h-screen overflow-hidden">
-      <div className="bg-space absolute inset-0 pointer-events-none"></div>
+    <div className="relative w-full min-h-screen overflow-hidden bg-black">
+      {/* <div className="bg-space absolute inset-0 pointer-events-none"></div> */}
+      <div className="absolute inset-0 pointer-events-none" style={{ width: '100%', height: 'auto', position: 'absolute'}}>
+        <Particles
+            particleColors={['#00FF00', '#FFFF00']}
+            particleCount={300}
+            particleSpread={20}
+            speed={0.1}
+            particleBaseSize={300}
+            moveParticlesOnHover={false}
+            alphaParticles={false}
+            disableRotation={false}
+        />
+        </div>
 
       {/* Header */}
       <MainHeader />
@@ -29,7 +42,7 @@ export default function Home() {
       <div className="max-w-6xl mx-auto mt-32 px-6 flex flex-col gap-6">
 
         {/* Навигация */}
-        <nav className="flex gap-8 mb-10 overflow-x-auto pb-2">
+        <nav className="flex gap-8 mb-10 overflow-x-auto pb-2 z-1">
           {["📅 Календарь", "🧠 AI помощь", "📈 Статистика", "🔥 Streak"].map((item) => (
             <button
               key={item}
@@ -47,16 +60,21 @@ export default function Home() {
           <div className="lg:col-span-2 space-y-8">
             {/* Календарь */}
             <div className="bg-white/5 backdrop-blur-2xl border border-white/30 rounded-3xl p-8 text-white">
-              <CalendarSection onSelectDay={setSelectedDay} />
+            <div className="flex justify-center">
+                <div className="scale-[1.4] origin-bottom px-4 py-3">
+                    <CalendarSection onSelectDay={setSelectedDay} />
+                </div>
+            </div>
               {selectedDay && (
                 <div className="mt-6 text-center text-xl text-green-400 font-bold">
                   🔘 Выбрано: {selectedDay.toLocaleDateString()}
                 </div>
               )}
+              
             </div>
 
             {/* Цели на день */}
-            <div className="bg-white/5 backdrop-blur-2xl border border-white/30 rounded-3xl p-8">
+            <div className="bg-white/5 backdrop-blur-2xl border border-white/30 rounded-3xl p-8 my-10">
               <h3 className="text-2xl font-bold mb-6">Твои цели на день</h3>
               <div className="space-y-4">
                 {selectedGoals.map((goal, i) => (
@@ -95,7 +113,7 @@ export default function Home() {
                 ⚡ Мотивация дня
               </h3>
               <p className="text-lg italic leading-relaxed">
-                {motivation}
+                "{motivation}"
               </p>
             </div>
 
@@ -110,6 +128,8 @@ export default function Home() {
           <DayModal date={selectedDay || new Date()} onClose={() => setShowAI(false)} />
         )}
       </div>
+
+      <Footer />
     </div>
   );
 }

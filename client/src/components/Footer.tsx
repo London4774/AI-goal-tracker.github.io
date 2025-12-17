@@ -1,4 +1,5 @@
 import { FaGithub, FaTelegram, FaTwitter } from "react-icons/fa6";
+import {Link} from "react-router-dom";
 
 const navigation = ["Контакты", "FAQ", "Политика конфиденциальности", "Terms"];
 
@@ -10,16 +11,17 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-black border-t-2 border-green-500/80 py-12">
+    <footer className="bg-black/50 border-t-2 border-green-500/80 py-12 backdrop-blur-xl ">
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         
 
         <div className="flex flex-col items-center md:items-start gap-6">
-          <a href="/" className="text-2xl font-bold">
-            <span className="text-green-500">Goal</span>
-            <span className="text-white">Tracker with</span>
-            <span className="text-green-500">AI</span>
-          </a>
+          <Link className="text-2xl font-bold" to={"/"}>
+           <span className="text-green-500">Track
+              <span className="text-yellow-500">UR</span>
+              <span className="text-white">Future</span>
+            </span>
+          </Link>
           <nav className="hidden md:flex flex-wrap gap-6 text-sm text-gray-400">
             {navigation.map((item) => (
               <a key={item} href="#" className="hover:text-white transition">
