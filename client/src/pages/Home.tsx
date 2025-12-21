@@ -5,6 +5,8 @@ import DayModal from "../components/DayModal";
 import Particles from "./../components/Particles";
 import Footer from "./../components/Footer";
 import { FaPlus, FaStar, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Progressbar from "../components/Progressbar";
+
 
 
 
@@ -20,9 +22,9 @@ export default function Home() {
   const [showAI, setShowAI] = useState(false);
   const motivation = "Ты становишься сильнее каждый раз, когда не сдаешься.";
 
+
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-black">
-      {/* <div className="bg-space absolute inset-0 pointer-events-none"></div> */}
       <div className="absolute inset-0 pointer-events-none" style={{ width: '100%', height: 'auto', position: 'absolute'}}>
         <Particles
             particleColors={['#00FF00', '#FFFF00']}
@@ -58,10 +60,11 @@ export default function Home() {
 
           {/* Левая колонка: Календарь + Цели */}
           <div className="lg:col-span-2 space-y-8">
+
             {/* Календарь */}
             <div className="bg-white/5 backdrop-blur-2xl border border-white/30 rounded-3xl p-8 text-white">
             <div className="flex justify-center">
-                <div className="scale-[1.4] origin-bottom px-4 py-3">
+                <div className="scale-[1.45] origin-bottom px-4 py-3">
                     <CalendarSection onSelectDay={setSelectedDay} />
                 </div>
             </div>
@@ -117,8 +120,15 @@ export default function Home() {
               </p>
             </div>
 
+            
+            {/* прогресс-бар */}
+            <Progressbar/> 
+            {/* прогресс-бар end */}
+
           </div>
         </div>
+
+
 
         {/* Модалки */}
         {selectedDay && (

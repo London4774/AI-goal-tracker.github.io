@@ -17,7 +17,7 @@ export default function CalendarSection({ onSelectDay }: CalendarSectionProps) {
 
   return (
     <div className="mt-32 flex justify-start ml-10">
-      <div className="bg-white/7 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-xl">
+      <div className="bg-white/7 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-xl w-full">
         <DayPicker
           mode="single"
           selected={selected}

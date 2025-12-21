@@ -22,9 +22,12 @@ export default function MainHeader() {
                 <Link to={"/"}>
                     <span className="text-green-500">Track
                         <span className="text-yellow-500">UR</span>
-                        <span className="text-white">Future</span>
+                        <span className="text-white">Future |</span>
                     </span>
                 </Link>
+
+                <span className="text-xl font-semibold text-gray-300"> Главная</span>
+
             </span>
 
             <div className="flex justify-between items-center gap-8 text-white">
@@ -45,9 +48,9 @@ export default function MainHeader() {
                             <li className="text-blue-400 my-2">UserName</li>
                             {dropdownItems.map((item) => (
                                 <li className="hover:text-green-500 my-2">
-                                        <Link className="flex items-center gap-1" to={item.link}>
-                                            {item.logo} {item.name}
-                                        </Link>
+                                    <Link className="flex items-center gap-1" to={item.link}>
+                                        {item.logo} {item.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>}
