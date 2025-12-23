@@ -4,15 +4,17 @@ export default function Progressbar() {
 
     const chartData = [
         {name: "progress", value: 100, fill: "#22c55e"},
-        {name: "background", value: 10, fill: "#ffff20"}
+        {name: "background", value: 30, fill: "#ffff20"},
+        {name: "background", value: 40, fill: "#ffff20"},
+
     ];
 
   const progressValue = 68;
 
   return (
-     <div className="bg-white/5 backdrop-blur-2xl border border-white/30 w-full rounded-2xl p-8">
-        <span className="text-white font-bold">Прогресс за неделю</span>
-            <div className="relative w-full h-64">
+     <div className="bg-white/5 backdrop-blur-2xl border border-white/30 w-full rounded-2xl p-6">
+        <span className="text-white text-xl font-bold">Прогресс за неделю</span>
+            <div className="relative w-full h-64 mb-4">
               <ResponsiveContainer width={"100%"} height={255}>
                 <RadialBarChart 
                   cx="50%"
@@ -20,7 +22,7 @@ export default function Progressbar() {
                   innerRadius={"60%"}
                   outerRadius={"90%"}
                     data={chartData}
-                  barSize={20}
+                  barSize={25}
                   startAngle={90}
                   endAngle={-270}
                   >
@@ -42,6 +44,10 @@ export default function Progressbar() {
                     <p className="text-white/70 text-sm mt-2">выполнено</p>
               </div>
             </div>
+
+            <p className="text-center text-white font-medium">
+              Продолжай в том же духе! 🔥
+            </p>
     
         </div>
     </div>
