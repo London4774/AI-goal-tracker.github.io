@@ -22,6 +22,7 @@ export default function Home() {
   const [showAI, setShowAI] = useState(false);
   const motivation = "Ты становишься сильнее каждый раз, когда не сдаешься.";
 
+  const [streak, setStreak] = useState(7);
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-black">
@@ -39,7 +40,7 @@ export default function Home() {
         </div>
 
       {/* Header */}
-      <MainHeader />
+      <MainHeader page={"Главная"}/>
 
       <div className="max-w-6xl mx-auto mt-32 px-6 flex flex-col gap-6">
 
@@ -97,12 +98,13 @@ export default function Home() {
           <div className="space-y-8">
                 
 
-                {/* streak mode */}
-            <div className="bg-white/5 backdrop-blur-2xl border border-white/30 rounded-3xl p-6">
+          {/* streak mode */}
+            <div className="bg-white/5 backdrop-blur-2xl border border-white/30 rounded-3xl p-6 text-center">
               <h3 className="text-white text-2xl font-bold">Счетчик дней подряд</h3>
-              <span className="text-center">1 день</span>
+              <p className="text-green-400 text-3xl py-1 font-semibold"> {streak}🔥 </p>
+              <p className="text-sm font-semibold">Не прерывай цепочку!</p>
             </div>
-            {/* streak mode end */}
+          {/* streak mode end */}
 
             {/* AI-помощник */}
             <div className="bg-white/5 backdrop-blur-2xl border border-white/30 rounded-3xl p-6">
@@ -119,8 +121,8 @@ export default function Home() {
             </div>
 
             {/* Мотивация дня */}
-            <div className="bg-gradient-to-br from-green-900/30 to-cyan-900/30 backdrop-blur-2xl border border-green-500/30 rounded-3xl p-8">
-              <h3 className="text-xl font-bold mb-4 flex items-center gap-3">
+            <div className="bg-gradient-to-br from-green-900/30 to-cyan-900/30 backdrop-blur-2xl border border-green-500/30 rounded-3xl p-4">
+              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                 ⚡ Мотивация дня
               </h3>
               <p className="text-lg italic leading-relaxed">

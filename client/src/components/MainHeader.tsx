@@ -7,7 +7,8 @@ const dropdownItems = [
     { name: "Профиль", logo: <FaUser/>, link: "/profile"}, {name: "Настройки", logo: <FaCog/>, link: "/settings"}, {name:"Выход", logo:<FaDoorOpen/>, link: "/"}
 ];
 
-export default function MainHeader() {
+
+export default function MainHeader({page}) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -26,7 +27,7 @@ export default function MainHeader() {
                     </span>
                 </Link>
 
-                <span className="text-xl font-semibold text-gray-300"> Главная</span>
+                <span className="text-xl font-semibold text-gray-300"> {page}</span>
 
             </span>
 

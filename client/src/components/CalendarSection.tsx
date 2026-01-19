@@ -2,7 +2,7 @@ import { useState } from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/dist/style.css";
 
-type CalendarSectionProps = {
+type CalendarSectionProps = { 
   onSelectDay: (day: Date | undefined) => void;
 };
 
