@@ -12,9 +12,13 @@ type Task = {
   done: boolean;
 };
 
+
+
 export default function DayModal({ date, onClose }: DayModalProps) {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTask, setNewTask] = useState("");
+
+  const safeDate = date ?? new Date();
 
   const addTask = () => {
     if (newTask.trim() === "") return;
@@ -41,7 +45,7 @@ export default function DayModal({ date, onClose }: DayModalProps) {
         </button>
 
         <h2 className="text-xl font-semibold mb-4">
-          Задачи на {date.toDateString()}
+          Задачи на {safeDate.toDateString()}
         </h2>
 
         <div className="flex gap-2 mb-4">

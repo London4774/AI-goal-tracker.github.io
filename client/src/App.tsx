@@ -5,6 +5,9 @@ import Layout from "./components/Layout";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Profile from "./pages/ProfilePage/Profile";
+import AiPage from "./pages/AiPage";
+import StatsPage from "./pages/StatsPage";
+import StreakPage from "./pages/StreakPage";
 
 function App() {
 
@@ -17,6 +20,9 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/home" element={<Home/>}/>
         <Route path="/profile" element={<Profile/>}/>
+        <Route path="/ai" element={<AiPage/>} />
+        <Route path="/stats" element={<StatsPage/>} />
+        <Route path="/streak" element={<StreakPage/>} />
       </Routes>
     </>
   )
